@@ -103,8 +103,21 @@ body {
     display: none;
 }
 
+
+/* VIDEO ***********************************/
 .sigVideo {
-    background-image: url('img/sigma-background.png');
+    /* background-image: url('img/sigma-background.png'); */
+    background: #222;
+    padding: 40px 0;
+}
+
+.sigVideo__header {
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px 0 40px;
+    font-size: 40px;
 }
 
 .videoWrapper {
@@ -121,9 +134,168 @@ body {
 	height: 100%;
 }
 
+.sigVideo__podcast {
+    background-image: url('img/sigma-background.png');
+    margin-top: 40px;
+    display: flex;
+}
+
+.sigVideo__column {
+
+}
+
+.sigVideo__column:first-child {
+    width: 33.3333%;
+}
+
+.sigVideo__image {
+    display: block;
+    width: 100%;
+}
+
+.sigVideo__column:last-child {
+    width: 66.6666%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sigVideo__podcastHeader {
+    font-size: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    padding: 10px 0;
+}
+
+.sigVideo__bluebar {
+    background: #0093ad;
+    color: #fff;
+    padding: 5px 20px;
+    margin: 0;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.sigVideo__title {
+    font-size: 17px;
+    color: #fff;
+    margin: 0;
+    padding: 5px 0;
+}
+
+.sigVideo__text {
+    padding-right: 50px;
+    color: #ccc;
+}
+
+.sigVideo__btn {
+    background: #0093ad;
+    display: inline-block;
+    align-self: left;
+    width: 150px;
+    text-align: center;
+    text-decoration: none;
+    padding: 9px 20px;
+    color: #fff;
+    border-radius: 5px; 
+    border: 1px solid #0093ad;
+}
+
+.sigVideo__btn:hover {
+    border: 1px solid #fff;
+    background: #06a8c5;
+}
+
+
+
 /* PRODUCTS  ******************************/
 .sigProducts {
-    background: #222;
+    background: #111;
+    padding: 40px 0;
+}
+
+.sigProducts__flexWrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.sigProducts__card {
+    background: #414141;
+    width: 32%;
+    text-decoration: none;
+    border-bottom: 5px solid #222;
+    border-top: 5px solid #222;
+    transition: all .15s ease-in-out;
+    opacity: .88;
+    margin: 8px 0;
+}
+
+.sigProducts__card:hover {
+    border-bottom: 5px solid #0093ad;
+    border-top: 5px solid #0093ad;
+    opacity: 1;
+}
+
+.sigProducts__image {
+    width: 100%;
+}
+
+.sigProducts__textWrapper {
+    padding: 0 20px 20px;
+}
+
+.sigProducts__title {
+    color: #fff;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.sigProducts__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sigProducts__listItem {
+    font-weight: 400;
+    color: #ccc;
+    font-size: 16px;
+}
+
+.sigProducts__listItem--bold {
+    font-weight: 600;
+    color: #fff;
+}
+
+/* FOOTER *********************************/
+.sigFooter {
+    text-align: center;
+    padding: 80px 0;
+    background-image: url('img/footer-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sigFooter__shopAll {
+    font-size: 40px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.sigFooter__btn {
+    margin: 0 auto;
+    display: inline-block;
+    background: #0093ad;
+    border-radius: 5px;
+    padding: 20px 80px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    border: 1px solid #0093ad;
 }
 
 /* MEDIA QUERIES ***************************/
@@ -149,6 +321,58 @@ body {
         font-size: 16px;
     }
 
+    .sigVideo__podcast {
+        flex-direction: column;
+    }
+
+    .sigVideo__column {
+        width: 100% !important;
+        align-self: center;
+        text-align: center;
+        justify-content: center;
+        display: block !important;
+    }
+
+    .sigVideo__image {
+        max-width: 400px;
+        margin: 0 auto;
+        padding-top: 20px;
+    }
+
+    .sigVideo__column:last-child {
+        padding: 20px 0 40px;
+    }
+
+    .sigVideo__btn {
+        justify-content: center;
+        align-content: center;
+    }
+
+    .sigVideo__text {
+        padding: 0 20px;;
+    }
+
+}
+
+
+@media (max-width: 820px) {
+    .sigProducts__flexWrapper {
+        flex-wrap: no-wrap;
+    }
+
+    .sigProducts__card {
+        width: 48.5%;
+        margin: 5px 0;
+    }
+
+    .sigProducts__listItem {
+        font-size: 14px;
+    }
+
+    .sigProducts__title {
+        margin-top: 0;
+        padding-top: 4px;
+    }
 }
 
 @media (max-width: 700px) {
@@ -215,6 +439,21 @@ body {
 
     .sigAdjust__text {
         font-size: 14px;
+    }
+
+    .sigProducts__card {
+        width: 100%;
+        padding: 10px;
+    }
+
+    section {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+
+    }
+
+    .sigVideo__header {
+        padding: 10px;
     }
     
 }
