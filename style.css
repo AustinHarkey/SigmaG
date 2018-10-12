@@ -15,7 +15,7 @@ body {
     background-image: url('img/sigma-background.png');
 }
 
-.sigHero__container {
+.container__hero {
     position: relative;
 }
 
